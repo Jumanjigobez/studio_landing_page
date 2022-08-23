@@ -1,0 +1,697 @@
+:root{
+	--White: hsl(0, 0%, 100%);
+	--Black: hsl(0, 0%, 0%);
+	--Dark-Gray: hsl(0, 0%, 55%);
+	--Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif; 
+}
+
+
+#header{
+	width: 100%;
+	min-height: 30rem;
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	background-blend-mode: multiply;
+	padding: 2rem 5rem;
+	color: var(--White);
+}
+.header_items{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: center;
+	font-size: 15px;
+}
+.header_items .menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+.menu .logo h1{
+	font-family: 'Alata', sans-serif;
+	font-weight: 400;
+	
+}
+.menu_btn{
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	display: none;
+}
+#menu{
+	display: block;
+}
+#menu li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 1rem 1rem;
+	cursor: pointer;
+	position: relative;
+}
+#menu li:after{
+	content: " ";
+	height: 2px;
+	width: 0px;
+	border-radius: 2px;
+	background-color: var(--White);
+	margin-top: 0.5rem;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+	right: 60%;
+	transition:all 0.2s ease-in-out;
+}
+#menu li:hover:after{
+	width: 30px;
+}
+
+.header_info{
+	margin-top: 8rem;
+	width: 50%;
+}
+.header_info h2{
+	border: 2px solid var(--White);
+	padding: 1rem 8rem 1rem 2rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 2rem;
+	word-wrap: wrap;
+}
+
+/*contents section*/
+#contents{
+	padding: 5rem 5rem;
+}
+#content_1{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+#content_1 .img_box{
+	position: relative;
+	width: 100%;
+}
+#content_1 .img_box img{
+	width: 35rem;
+	z-index: 100;
+}
+#content_1 .info_box{
+	background-color: var(--White);
+	padding: 3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 28rem;
+	margin-top: 10rem;
+	z-index: 1000;
+	width: 50%;
+	height: 100%;
+}
+#content_1 .info_box h3{
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	word-wrap: wrap;
+}
+#content_1 .info_box p{
+	padding-right: 1rem;
+	margin-top: 1rem;
+	font-size: 15px;
+	font-weight: 300;
+	color: var(--Very-Dark-Gray);
+}
+
+#content_2{
+	margin-top: 10rem;
+}
+#content_2 .title{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#content_2 .title h3{
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.btn{
+	border: 2px solid var(--Very-Dark-Gray);
+	background-color: var(--White);
+	padding: 10px 25px;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+.btn:hover{
+	background-color: black;
+	color: var(--White);
+	border: 2px solid black;
+}
+.last_btn{
+	display: none;
+}
+#content_2 .images{
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 2rem;
+}
+.image_box_1{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-deep-earth.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_2{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-night-arcade.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_3{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-soccer-team.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_4{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-grid.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_5{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-from-above.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_6{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-pocket-borealis.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_7{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-curiosity.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_8{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-fisheye.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 25rem;
+	padding: 20rem 5rem 0rem 2rem;
+	background-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+}
+.image_box_1:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-deep-earth.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_2:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-night-arcade.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_3:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-soccer-team.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_4:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-grid.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_5:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-from-above.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_6:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-pocket-borealis.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_7:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-curiosity.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+.image_box_8:hover{
+	background: rgba(0, 0, 0, 0.4) url(../images/desktop/image-fisheye.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+}
+h4{
+	color: var(--White);
+	font-weight: 300;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.image_box_1:hover h4,
+.image_box_2:hover h4,
+.image_box_3:hover h4,
+.image_box_4:hover h4,
+.image_box_5:hover h4,
+.image_box_6:hover h4,
+.image_box_7:hover h4,
+.image_box_8:hover h4{
+	color: var(--Black);
+	font-weight: bold;
+}
+
+
+/*footer section*/
+#footer{
+	margin-top: 5rem;
+	background-color: var(--Black);
+	color: var(--White);
+	padding: 2rem 5rem 0rem 5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.f_menu{
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.f_menu ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 1rem 0.5rem;
+	cursor: pointer;
+	position: relative;
+}
+.f_menu ul li:nth-child(1){
+	padding-left: 0rem;
+}
+.f_menu ul li:after{
+	content: " ";
+	height: 2px;
+	width: 0;
+	border-radius: 2px;
+	background-color: var(--White);
+	margin-top: 0.5rem;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+	right: 60%;
+	transition: 0.2s ease-in-out;
+}
+.f_menu ul li:hover:after{
+	width: 30px;
+}
+.social{
+	display: flex;
+	flex-direction: column;
+	
+}
+.icons{
+	display: flex;
+	justify-content: flex-end;
+}
+.icons ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 0rem 0.5rem;
+	cursor: pointer;
+	position: relative;
+}
+.icons ul li:after{
+	content: " ";
+	height: 2px;
+	width: 0;
+	border-radius: 2px;
+	background-color: var(--White);
+	margin-top: 1rem;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+	right: 60%;
+	transition: 0.2s ease-in-out;
+}
+.icons ul li:hover:after{
+	width: 20px;
+}
+
+.copyright{
+	margin-top: 2rem;
+	color: var(--Dark-Gray);
+}
+.copyright a{
+	color: red;
+	text-decoration: none;
+}
+
+@media (max-width: 375px){
+	#header{
+		width: 100%;
+		min-height: 50rem;
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-hero.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		background-blend-mode: multiply;
+		padding: 2rem 1rem;
+	}
+	.logo h1{
+		z-index: 20000;
+		position: relative;
+	}
+	.menu_btn{
+		display: block;
+		margin-top: 0.5rem;
+		font-size: 35px;
+		z-index: 20000;
+		position: relative;
+	}
+	#menu{
+		display: none;
+		background-color: black;
+		position: fixed;
+		padding-top: 12rem;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10000;
+	}
+	#menu li{
+		list-style-type: none;
+		display: block;
+		padding: 1rem 1rem;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 25px;
+		position: relative;
+	}
+	#menu li:after{
+		content: " ";
+		height: 2px;
+		width: 0px;
+		border-radius: 2px;
+		background-color: var(--White);
+		margin-top: 0.5rem;
+		position: absolute;
+		top: 60%;
+		left: 15%;
+		right: 60%;
+		transition:all 0.2s ease-in-out;
+	}
+	.header_info{
+		margin-top: 15rem;
+		width: 100%;
+	}
+	.header_info h2{
+		padding: 1rem 5rem 1rem 2rem;
+	}
+	#contents{
+		padding: 5rem 1rem;
+	}
+	#content_1{
+		flex-direction: column;
+	}
+	#content_1 .img_box img{
+		width: 100%;
+		z-index: 100;
+	}
+	#content_1 .info_box{
+		padding: 2rem;
+		position: relative;
+		margin-left: 0rem;
+		margin-top: 2rem;
+		z-index: 1000;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	#content_1 .info_box h3{
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		word-wrap: wrap;
+	}
+	#content_1 .info_box p{
+		padding-right: 0rem;
+		margin-top: 1rem;
+		font-size: 20px;
+		font-weight: 300;
+		color: var(--Very-Dark-Gray);
+	}
+	#content_2{
+		margin-top: 5rem;
+	}
+	#content_2 .title{
+		flex-direction: column;
+	}
+	#content_2 .title h3{
+		font-size: 25px;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.first_btn{
+		display: none;
+	}
+	.last_btn{
+		display: block;
+		width: 100%;
+	}
+	.image_box_1{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-deep-earth.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_2{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-night-arcade.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_3{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-soccer-team.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_4{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-grid.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_5{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-from-above.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_6{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-pocket-borealis.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_7{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-curiosity.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_8{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-fisheye.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 10rem;
+		padding: 8rem 10rem 2rem 2rem;
+		background-blend-mode: multiply;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+	}
+	.image_box_1:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-deep-earth.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_2:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-night-arcade.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_3:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-soccer-team.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_4:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-grid.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_5:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-from-above.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_6:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-pocket-borealis.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_7:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-curiosity.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	.image_box_8:hover{
+		background: rgba(0, 0, 0, 0.4) url(../images/mobile/image-fisheye.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.5);
+	}
+	h4{
+		color: var(--White);
+		font-weight: 300;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	#footer{
+		padding-bottom: 1rem;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	.f_menu{
+		justify-content: center;
+	}
+	.f_menu ul li{
+		list-style-type: none;
+		display: block;
+		text-align: center;
+		padding: 1rem 0.5rem;
+		cursor: pointer;
+		position: relative;
+	}
+	.f_menu ul li:after{
+		left: 40%;
+		
+	}
+	.icons{
+		margin-top: 2rem;
+	}
+	.copyright{
+		width: 100%;
+		text-align: center;
+	}
+}
