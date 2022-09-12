@@ -409,7 +409,7 @@ h4{
 	text-decoration: none;
 }
 
-@media (max-width: 375px){
+@media (max-width: 600px){
 	#header{
 		width: 100%;
 		min-height: 50rem;
